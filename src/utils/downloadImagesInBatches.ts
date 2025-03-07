@@ -91,7 +91,7 @@ async function downloadImage(url: string, filename: string, folder: string) {
                 console.error(
                   `Error: Unable to save ${formattedFilename} (empty file).`
                 );
-                reject(new Error("Empty file"));
+                resolve();
                 return;
               }
               // to cache the image locally, we store a file with the same name as the image, but with a .lastUpdated extension and the timestamp
